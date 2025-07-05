@@ -11,7 +11,7 @@ MainWindow::MainWindow(QVector<std::shared_ptr<Car>>& _cars, QVector<std::shared
     QIntValidator *validator = new QIntValidator(0, 1000000000, this);
     ui->lineEdit_2->setValidator(validator);
 
-    QIntValidator *validator2 = new QIntValidator(0, 500, this);
+    QIntValidator *validator2 = new QIntValidator(0, 1000, this);
     ui->lineEdit_3->setValidator(validator2);
     ui->lineEdit_4->setValidator(validator2);
 
