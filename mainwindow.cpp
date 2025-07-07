@@ -101,7 +101,11 @@ void MainWindow::on_pushButton_clicked()
     ui->tableWidget->setRowCount(max);
 
     int x = cars.size();
+    ui->tableWidget->setColumnCount(4);
 
+    QStringList headers;
+    headers << "Название ТС" << "Цена, $" << "Мощность, кВт"<<"Грузоподъёмность, т";
+    ui->tableWidget->setHorizontalHeaderLabels(headers);
     for (int row = 0; row < max; row++)
     {
         if(row < x){
@@ -178,7 +182,7 @@ void MainWindow::on_pushButton_3_clicked()
         Car* car = new Car(name, cost, pow);
          for(int i=0; i< cars.size();i++){
             if(*car == *cars[i]){
-                cars.removeAt(i);
+                cars.removeAt(i--);
             }
 
         }
@@ -188,7 +192,7 @@ void MainWindow::on_pushButton_3_clicked()
         Truck* car = new Truck(name, cost, pow, payload);
         for(int i=0; i< trucks.size();i++){
             if(*car == *trucks[i]){
-                trucks.removeAt(i);
+                trucks.removeAt(i--);
             }
 
         }
@@ -209,7 +213,11 @@ void MainWindow::on_pushButton_3_clicked()
     ui->tableWidget->setRowCount(max);
 
     int x = cars.size();
+    ui->tableWidget->setColumnCount(4);
 
+    QStringList headers;
+    headers << "Название ТС" << "Цена, $" << "Мощность, кВт"<<"Грузоподъёмность, т";
+    ui->tableWidget->setHorizontalHeaderLabels(headers);
     for (int row = 0; row < max; row++)
     {
         if(row < x){
